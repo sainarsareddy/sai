@@ -23,18 +23,26 @@
 </head>
 <body>
 <div class = "section">
-    <canvas class="webgl">
-
-    </canvas>
+    <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-text" >WELCOME <%=user%></h1>
+          <button class="btn btn-dark btn-lg" href="signup.ejs" type="button"><i class="fa-brands fa-apple" ></i> Download</button>
+          <button class="btn btn-outline-light btn-lg" type="button" href="signup.ejs"><i class="fa-brands fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img class="iphone" src="images/certificate (1).png" alt="iphone-mockup">
+        </div>
+      </div>
+    
     <div class="row">
         <div class="pricing-column col-lg-4 col-md-6">
           <div class="card ">
             <div class="card-header">
-              <img class="marks-sheet"src="images/documentation.png">
+              <img class="marks-sheet" src= "">
               <h3>Marks sheet</h3>
             </div>
               <div class="card-body">
-              <button class="btn2 btn-outline-dark btn-block btn-lg" href="signup.ejs" type="button">GET</button> 
+              <button class="btn2 btn-outline-dark btn-block btn-lg" href= "" type="button">GET</button> 
             </div>
           </div>
         </div>
@@ -171,21 +179,5 @@
       </div>
     </div>
 </div>
-<script type="module" >
-    import * as THREE from 'three'
-    const scene = new THREE.Scene();
-const geometry = new THREE.BoxGeometry( 2, 2, 2 );
-const material = new THREE.MeshBasicMaterial( {color: '#82CD47'} );
-const mesh = new THREE.Mesh( geometry, material );
-scene.add(mesh);
-
-const camera = new  THREE.PerspectiveCamera(45,800,600)
-scene.add(camera)
-
-const canvas = document.querySelector('.webgl')
-const renderer = new THREE.WebGLRenderer({ canvas })
-renderer.setsize(800,600)
-renderer.render(scene,camera)
-</script>
 </body>
 </html>
